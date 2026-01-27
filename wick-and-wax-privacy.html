@@ -3,125 +3,440 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for Wick & Wax - Candle Calculator App">
+    <meta name="description" content="Privacy Policy for Wick & Wax - Candle Calculator App by Papalote Labs">
     <title>Privacy Policy | Wick & Wax</title>
     <link rel="icon" type="image/png" href="assets/papalote-icon.png">
     <style>
         :root {
-            --primary: #2C3E50;
+            --primary: #8B4D5C;
+            --primary-dark: #6B3A47;
             --accent: #D4A574;
+            --accent-light: #E8C9A0;
             --background: #FBF8F4;
+            --surface: #FFFFFF;
             --text: #2D2A26;
             --text-secondary: #6B6560;
+            --text-muted: #9C9691;
+            --border: #E5DED4;
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--background);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.7;
+            font-size: 16px;
         }
-        .container {
-            max-width: 700px;
+
+        /* Header */
+        .header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        h1 {
-            font-size: 2rem;
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
         }
-        .updated {
+
+        .brand-logo {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .back-link {
             color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
+            text-decoration: none;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s;
         }
-        h2 {
-            font-size: 1.25rem;
+
+        .back-link:hover {
             color: var(--primary);
-            margin-top: 2rem;
-            margin-bottom: 0.75rem;
         }
-        p, ul {
-            margin-bottom: 1rem;
-            color: var(--text);
+
+        /* Main content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
         }
-        ul {
-            padding-left: 1.5rem;
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 2.5rem;
         }
-        li {
+
+        .hero h1 {
+            font-size: 2.25rem;
+            color: var(--primary);
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
-        a {
-            color: var(--accent);
+
+        .hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
         }
-        .back {
+
+        .updated-badge {
             display: inline-block;
-            margin-bottom: 2rem;
+            background: var(--accent-light);
+            color: var(--primary-dark);
+            padding: 0.35rem 0.85rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        /* Table of contents */
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .toc-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .toc-list a {
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.9rem;
+            padding: 0.4rem 0;
+            display: block;
+            transition: color 0.2s;
         }
-        .back:hover {
+
+        .toc-list a:hover {
+            color: var(--primary);
+        }
+
+        .toc-list a::before {
+            content: "→ ";
             color: var(--accent);
         }
-        .contact {
+
+        /* Sections */
+        .section {
+            margin-bottom: 2.5rem;
+            scroll-margin-top: 80px;
+        }
+
+        .section h2 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-light);
+            display: inline-block;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .section ul {
+            margin-bottom: 1rem;
+            padding-left: 1.25rem;
+        }
+
+        .section li {
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .section li::marker {
+            color: var(--accent);
+        }
+
+        .section strong {
+            color: var(--text);
+        }
+
+        .section a {
+            color: var(--primary);
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+            text-underline-offset: 2px;
+        }
+
+        .section a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Info cards */
+        .info-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .info-card-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .info-card p, .info-card ul {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Contact section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-section h2 {
+            color: white;
+            border: none;
+            margin-bottom: 0.75rem;
+            display: block;
+            padding: 0;
+        }
+
+        .contact-section p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+        }
+
+        .contact-email {
+            display: inline-block;
             background: white;
-            padding: 1.5rem;
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
             border-radius: 8px;
-            margin-top: 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="/" class="back">&larr; Back to Papalote Labs</a>
-
-        <h1>Privacy Policy</h1>
-        <p class="updated">Wick & Wax · Last updated: January 26, 2025</p>
-
-        <h2>Overview</h2>
-        <p>Wick & Wax is a candle making calculator developed by Papalote Labs. This privacy policy explains how we handle information when you use our app.</p>
-
-        <h2>Information We Collect</h2>
-        <p><strong>Data You Provide:</strong> The app allows you to save candle presets and settings. This data is stored locally on your device only and is never transmitted to our servers.</p>
-        <p><strong>Advertising Data:</strong> The app uses Google AdMob to display advertisements. AdMob may collect:</p>
-        <ul>
-            <li>Device identifiers (Advertising ID)</li>
-            <li>IP address</li>
-            <li>General location (country/region)</li>
-            <li>App usage data</li>
-        </ul>
-        <p>This data is collected by Google, not by us. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> for more information.</p>
-
-        <h2>How We Use Information</h2>
-        <ul>
-            <li><strong>Local data:</strong> Your presets and settings remain on your device to provide app functionality</li>
-            <li><strong>Ad data:</strong> Used by Google to show relevant advertisements</li>
-        </ul>
-
-        <h2>Data Sharing</h2>
-        <p>We do not sell, trade, or share your personal information. The only third party that receives data is Google AdMob for advertising purposes.</p>
-
-        <h2>Data Storage</h2>
-        <p>All app data (presets, settings) is stored locally on your device. We do not operate servers that store your information.</p>
-
-        <h2>Your Choices</h2>
-        <ul>
-            <li><strong>Ad personalization:</strong> You can opt out of personalized ads in your device settings</li>
-            <li><strong>Delete data:</strong> Uninstalling the app removes all locally stored data</li>
-        </ul>
-
-        <h2>Children's Privacy</h2>
-        <p>The app is not directed at children under 13. We do not knowingly collect information from children.</p>
-
-        <h2>Changes to This Policy</h2>
-        <p>We may update this privacy policy from time to time. Changes will be reflected in the "Last updated" date above.</p>
-
-        <div class="contact">
-            <h2 style="margin-top: 0;">Contact Us</h2>
-            <p style="margin-bottom: 0;">If you have questions about this privacy policy, contact us at <a href="mailto:info@papalote.dev">info@papalote.dev</a></p>
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="brand">
+                <span class="brand-logo">W&W</span>
+                <span>Wick & Wax</span>
+            </a>
+            <a href="/" class="back-link">
+                <span>←</span>
+                <span>Papalote Labs</span>
+            </a>
         </div>
-    </div>
+    </header>
+
+    <main class="container">
+        <div class="hero">
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">How we handle your information in the Wick & Wax app</p>
+            <span class="updated-badge">Last updated: January 26, 2025</span>
+        </div>
+
+        <nav class="toc">
+            <div class="toc-title">Quick Navigation</div>
+            <ul class="toc-list">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#collection">Information We Collect</a></li>
+                <li><a href="#usage">How We Use Information</a></li>
+                <li><a href="#sharing">Data Sharing</a></li>
+                <li><a href="#storage">Data Storage</a></li>
+                <li><a href="#choices">Your Choices</a></li>
+                <li><a href="#children">Children's Privacy</a></li>
+                <li><a href="#changes">Policy Changes</a></li>
+            </ul>
+        </nav>
+
+        <section class="section" id="overview">
+            <h2>Overview</h2>
+            <p>Wick & Wax is a candle making calculator designed to help crafters determine wax and fragrance quantities. The app is developed by Papalote Labs. This privacy policy explains how we handle information when you use our app.</p>
+        </section>
+
+        <section class="section" id="collection">
+            <h2>Information We Collect</h2>
+
+            <div class="info-card">
+                <div class="info-card-title">📱 Data You Provide</div>
+                <p>The app allows you to save candle presets (container sizes, fragrance percentages) and settings. This data is stored <strong>locally on your device only</strong> and is never transmitted to our servers.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-title">📊 Advertising Data</div>
+                <p>The app uses Google AdMob to display advertisements. AdMob may collect:</p>
+                <ul>
+                    <li>Device identifiers (Advertising ID)</li>
+                    <li>IP address</li>
+                    <li>General location (country/region)</li>
+                    <li>App usage data</li>
+                </ul>
+                <p>This data is collected by Google, not by us. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> for details.</p>
+            </div>
+        </section>
+
+        <section class="section" id="usage">
+            <h2>How We Use Information</h2>
+            <ul>
+                <li><strong>Local data:</strong> Your presets and settings remain on your device to provide app functionality</li>
+                <li><strong>Ad data:</strong> Used by Google to display relevant advertisements</li>
+            </ul>
+        </section>
+
+        <section class="section" id="sharing">
+            <h2>Data Sharing</h2>
+            <p>We do not sell, trade, or share your personal information with third parties. The only external service that may receive data is Google AdMob for advertising purposes, as described above.</p>
+        </section>
+
+        <section class="section" id="storage">
+            <h2>Data Storage</h2>
+            <p>All app data (presets, settings) is stored locally on your device using standard secure storage. We do not operate servers that store your personal information.</p>
+        </section>
+
+        <section class="section" id="choices">
+            <h2>Your Choices</h2>
+            <ul>
+                <li><strong>Ad personalization:</strong> You can opt out of personalized ads through your device's privacy settings</li>
+                <li><strong>Delete data:</strong> Uninstalling the app will remove all locally stored data from your device</li>
+            </ul>
+        </section>
+
+        <section class="section" id="children">
+            <h2>Children's Privacy</h2>
+            <p>Wick & Wax is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe we have inadvertently collected such information, please contact us.</p>
+        </section>
+
+        <section class="section" id="changes">
+            <h2>Policy Changes</h2>
+            <p>We may update this privacy policy from time to time to reflect changes in our practices or for legal reasons. Any updates will be reflected in the "Last updated" date at the top of this page.</p>
+        </section>
+
+        <section class="contact-section">
+            <h2>Questions?</h2>
+            <p>If you have any questions about this privacy policy or our practices, we're here to help.</p>
+            <a href="mailto:info@papalote.dev" class="contact-email">info@papalote.dev</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-brand">© 2025 Papalote Labs. All rights reserved.</p>
+            <nav class="footer-links">
+                <a href="/">Home</a>
+                <a href="https://github.com/Papalote-Labs" target="_blank" rel="noopener">GitHub</a>
+                <a href="mailto:info@papalote.dev">Contact</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
