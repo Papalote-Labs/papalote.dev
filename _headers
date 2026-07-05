@@ -1,0 +1,5 @@
+# Always revalidate before serving from cache, so a redeploy is visible
+# immediately instead of being masked by a stale 4h-cached copy.
+# ETags make this cheap: unchanged files return a 304, changed files serve fresh.
+/*
+  Cache-Control: public, max-age=0, must-revalidate
