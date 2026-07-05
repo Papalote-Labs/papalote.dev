@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" fill="#2F3E46" role="img" aria-label="Papalote Labs kite mark">
+  <defs>
+    <mask id="spars" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="260">
+      <rect width="200" height="260" fill="black"/>
+      <path d="M100 20 L170 100 L100 210 L30 100 Z" fill="white"/>
+      <line x1="100" y1="20" x2="100" y2="210" stroke="black" stroke-width="11" stroke-linecap="round"/>
+      <line x1="30" y1="100" x2="170" y2="100" stroke="black" stroke-width="11" stroke-linecap="round"/>
+    </mask>
+  </defs>
+  <g mask="url(#spars)"><path d="M100 20 L170 100 L100 210 L30 100 Z"/></g>
+  <path d="M100 210 C 95 232 120 236 150 250" fill="none" stroke="#2F3E46" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="100" cy="219" r="5"/>
+  <circle cx="107" cy="230" r="4.2"/>
+  <circle cx="121" cy="238" r="3.4"/>
+  <circle cx="137" cy="244" r="2.7"/>
+  <circle cx="150" cy="250" r="2"/>
+</svg>

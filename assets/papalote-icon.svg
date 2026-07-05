@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Papalote Labs">
+  <defs>
+    <mask id="spars" maskUnits="userSpaceOnUse" x="28" y="26" width="200" height="204">
+      <rect x="28" y="26" width="200" height="204" fill="black"/>
+      <path d="M128 46 L184 110 L128 198 L72 110 Z" fill="white"/>
+      <line x1="128" y1="46" x2="128" y2="198" stroke="black" stroke-width="8.8" stroke-linecap="round"/>
+      <line x1="72" y1="110" x2="184" y2="110" stroke="black" stroke-width="8.8" stroke-linecap="round"/>
+    </mask>
+  </defs>
+  <rect width="256" height="256" rx="58" fill="#2F3E46"/>
+  <g mask="url(#spars)"><path d="M128 46 L184 110 L128 198 L72 110 Z" fill="#FF8C42"/></g>
+  <path d="M128 198 C 124 216 144 219 168 230" fill="none" stroke="#8E86E6" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="128" cy="205" r="4" fill="#8E86E6"/>
+  <circle cx="134" cy="214" r="3.4" fill="#8E86E6"/>
+  <circle cx="145" cy="220" r="2.7" fill="#8E86E6"/>
+  <circle cx="158" cy="225" r="2.2" fill="#8E86E6"/>
+  <circle cx="168" cy="230" r="1.6" fill="#8E86E6"/>
+</svg>
