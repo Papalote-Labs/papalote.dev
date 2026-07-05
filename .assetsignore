@@ -1,7 +1,0 @@
-.git
-.github
-.gitignore
-.assetsignore
-node_modules
-wrangler.toml
-README.md
