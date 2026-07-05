@@ -18,9 +18,10 @@ Or just open `public/index.html` directly in a browser.
 Deployed via **Cloudflare Pages** (project `papalote-dev`), auto-deploying on push
 to `main`. No build step — Pages serves the site straight from the output directory.
 
-**Build output directory: `public`.** Only the contents of `public/` are published,
-which keeps `.git`, `.github`, and other repo files off the live site. This is set in
-the Pages dashboard under **Settings → Builds & deployments → Build output directory**.
+**Build output directory: `public`**, set via `pages_build_output_dir` in
+`wrangler.toml` (the source of truth for the git-connected project — it overrides
+the dashboard build settings). Only the contents of `public/` are published, which
+keeps `.git`, `.github`, `wrangler.toml`, and other repo files off the live site.
 
 Caching is controlled by `public/_headers`, which forces revalidation
 (`Cache-Control: public, max-age=0, must-revalidate`) so redeploys are visible
@@ -45,6 +46,7 @@ papalote.dev/
 │   │   └── papalote-icon.png            # PNG favicon fallback
 │   └── styles/
 │       └── main.css
+├── wrangler.toml                # Pages build config (pages_build_output_dir)
 └── README.md
 ```
 
